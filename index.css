@@ -1,0 +1,488 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Torus Notched SemiBold"; src: url("//db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.eot"); src: url("//db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.woff") format("woff"), url("//db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.svg#Torus Notched SemiBold") format("svg");
+    scroll-behavior: smooth;
+}
+body { 
+    opacity: 0;
+ }
+header {
+    height: 100vh;
+    background-size: 100%;  
+    background: linear-gradient(to bottom, transparent, rgb(6,1,55)),url(/img/flipperfond.jpeg);
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-position: center;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+    text-shadow: rgb(0, 0, 0) 0 -2px;
+
+}
+
+header h1 {
+    margin-top: 350px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*background: linear-gradient(to topéz, #ec3636, rgb(255, 255, 255));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;*/
+}
+
+header .Text {
+    position: absolute;
+    text-align: center;
+}
+.navbar {
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(30, 25, 25, 0.7);
+}
+.navbar a {
+    color: white;
+}
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+.navbar .nav-links ul {
+    display: flex;
+}
+.navbar .nav-links ul li {
+    margin: 0 25px;
+    font-size: 1.5em;
+}
+.navbar .nav-links ul li.active a {
+    color: red;
+    font-weight: 600;
+}
+.navbar .menu-hamburger {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 35px;
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 0;
+    }
+    .navbar .logo {
+        position: absolute;
+        top: 40px;
+        left: 30px;
+    }
+    .navbar .menu-hamburger {
+         display: block;
+
+    }
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+
+    }
+    
+    
+}
+
+  
+.annonce {
+    font-size: 2em;
+}
+
+/*-- Section 1 --*/
+
+.sec1 {
+    background: linear-gradient(#070137, #EF3F32);
+}
+
+.sec1 .container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sec1 .title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+    margin-bottom: 100px;
+}
+
+.sec1 .title:before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #FFD03A;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 35%, 64% 100%, 48% 35%, 31% 100%, 16% 35%, 0 80%);
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sec1 .content {
+    color: rgb(255, 255, 255);
+}
+.sec1 h2 {
+    font-size: 2.5em;
+}
+
+.sec1 .titre {
+    display: flex;
+    align-items: center;
+}
+.sec1 .point {
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: #FFD03A;
+    border-radius: 50px;
+    border: 3px solid white;
+}
+
+.sec1 .separateur {
+    width: 75px;
+    height: 7px;
+    background-color: #FFD03A;
+    border-radius: 0 50px 50px 0;
+    margin: 25px 0;
+}
+.sec1 p {
+    max-width: 600px;
+    line-break: anywhere;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sec1 button {
+    position: relative;
+    height: 60px;
+    width: 220px;
+    border-radius: 50px;
+    border: 3px solid white;
+    background-color: transparent;
+    font-size: 1.5em;
+    color: white;
+    z-index: 2;
+    transform: 0.3s;
+    overflow: hidden;
+}
+
+.sec1 button {
+    position: relative;
+    height: 70px;
+    width: 250px;
+    border-radius: 50px;
+    border: 3px solid #FFD03A;
+    background-color: white;
+    font-size: 1.5em;
+    color: #FFD03A;
+    transition: 0.3s;
+    z-index: 2;
+    overflow: hidden;
+    margin-top: 25px;
+}
+
+.sec1 button:hover {
+    color: white;
+
+}
+
+.sec1 button::before {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 250px;
+    border-radius: 50px;
+    background-color: #FFD03A;
+    top: -2px;
+    left: -2px;
+    transform: translate(-100%);
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.sec1 button:hover::before {
+    transform: translate(0%);
+}
+
+.sec1 button i {
+    display: none;
+}
+
+.sec1 button:hover i {
+    display: inline;
+}
+
+
+
+@media (min-width: 1500px) {
+    .content-top .left {
+        max-width: 700px;
+    }
+    .content-bottom .right {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .sec1 .content {
+        margin: 50px 0;
+    }
+    .sec1 .content img{
+        width: 90%;
+    }
+    .sec1 .content-top {
+        flex-direction: column;
+    }
+
+    .sec1 .content-bottom {
+        flex-direction: column-reverse;
+    }
+
+    .sec1 .container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sec1 p {
+        max-width: 900px;
+        margin: 0 50px;
+    }
+    .sec1 .content-top .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .sec1 .content-bottom .right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+
+    }
+    .sec1 .separateur {
+        border-radius: 50px;
+    }
+    .sec1 .titre {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sec1 .point{
+        margin-right: 0px;
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    background-color: black;
+    text-align: center;
+}
+  
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+/*-- Section 2 --*/
+
+section#appointment{
+    background: linear-gradient( #EF3F32,#070137);
+    padding: 50px 0;
+}
+
+section#appointment .container {
+    max-width: 1100px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: white;
+    height: 540px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 20px 50px -10px #d6d6d6;
+}
+section#appointment .container .formulaire {
+    width: 55%;
+    margin-right: 20px;
+}
+
+section#appointment .container .formulaire form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section#appointment .container .formulaire h3 {
+    font-size: 2em;
+    color: #2a2a2a;
+    margin-bottom: 50px;
+}
+
+section#appointment .container .formulaire input {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid grey;
+    transition: 0.2s;
+}
+
+section#appointment .container .formulaire input:hover {
+    border-bottom: 2px solid #8ddfff;
+}
+
+section#appointment .container .formulaire input.nom-famille,
+section#appointment .container .formulaire input.email {
+    width: 42%;
+}
+
+section#appointment .container .formulaire input.numero-tel,
+section#appointment .container .formulaire input.date {
+    width: 42%;
+}
+section#appointment .container .formulaire input.horaire {
+    width: 42%;
+}
+
+section#appointment .container .formulaire button.submit-btn {
+    width: 192px;
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+    background-color: #322f85;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 30px;
+    outline: none;
+}
+
+section#appointment .container .formulaire-image {
+    width: 40%;
+    background-color: #322f85;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+section#appointment .container .formulaire-image img {
+    width: 324px;
+}
+
+
+@media screen and (max-width: 768px) {
+    section#appointment .container .formulaire-image {
+        display: none;
+    }
+
+    section#appointment .container {
+        justify-content: center;
+    }
+    section#appointment .container .formulaire {
+        margin-right: 0px;
+        width: 80%;
+    }
+    section#appointment .container .formulaire h3 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    section#appointment .container .formulaire  {
+        width: 95%;
+    } 
+    section#appointment .container .formulaire input.nom-famille,
+    section#appointment .container .formulaire input.email,
+    section#appointment .container .formulaire input.numero-tel,
+    section#appointment .container .formulaire input.date,
+    section#appointment .container .formulaire input.horaire {
+    width: 100%;
+}
+
+}
+
+/* puce */
+
+.onglet-side {
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+    z-index: 9999;
+}
+.onglet-side a {
+    height: 12px;
+    width: 12px;
+    margin: 5px 0;
+    background-color: #ffffff;
+    border: 3px solid #FFD03A;
+    border-radius: 50px;
+}
+
+.onglet-side a.active1 {
+    height: 12px;
+    width: 12px;
+    margin: 5px 0;
+    background-color: #FFD03A;
+    border: 3px solid #FFD03A;
+    border-radius: 50px;
+}
+
+@media (max-width: 1000px) {
+    .onglet-side {
+        display: none;
+    }
+}
